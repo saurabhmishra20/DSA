@@ -2,9 +2,11 @@ class Solution {
 public:
     int majorityElement(vector<int>& nums) {
         map<int, int> M;
-        for(int i =0; i<nums.size(); i++){
+        for(int i=0; i<nums.size(); i++)
+        {
             M[nums[i]]++;
-            if(M[nums[i]] > nums.size()/2){
+            if(M[nums[i]]>nums.size()/2)
+            {
                 return nums[i];
             }
         }
