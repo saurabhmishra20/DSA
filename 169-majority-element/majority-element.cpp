@@ -1,15 +1,26 @@
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-        map<int, int> M;
-        for(int i=0; i<nums.size(); i++)
+        sort(nums.begin(), nums.end());
+        //vector<int>arr;
+        int n = nums.size();
+        int freq=1;
+        int ans=nums[0];
+        for(int i=1; i<n; i++)
         {
-            M[nums[i]]++;
-            if(M[nums[i]]>nums.size()/2)
-            {
-                return nums[i];
-            }
+                if(nums[i]==nums[i-1])
+                {
+                     freq++;
+                }
+                else
+                {
+                    freq=1;
+                    ans=nums[i];
+                }
+                if(freq>n/2)
+                return ans;
         }
-        return -1;
+           
+        return ans;
     }
 };
