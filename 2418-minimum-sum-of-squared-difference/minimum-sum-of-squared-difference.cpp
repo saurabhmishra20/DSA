@@ -1,7 +1,7 @@
 class Solution {
 public:
     long long minSumSquareDiff(vector<int>& nums1, vector<int>& nums2, int k1, int k2) {
-           int n = nums1.size();
+          int n = nums1.size();
 
         vector<int> diff(n);
         for (int i = 0; i < n; ++i) {
