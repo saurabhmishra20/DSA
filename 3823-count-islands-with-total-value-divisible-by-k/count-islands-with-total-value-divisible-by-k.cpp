@@ -18,7 +18,6 @@ public:
 
         return sum;
     }
-
     int countIslands(vector<vector<int>>& grid, int k) {
         m = grid.size();
         n = grid[0].size();
