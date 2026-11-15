@@ -1,6 +1,6 @@
 class Solution {
 public:
-      int M = 1e9+7;
+       int M = 1e9+7;
     int numOfSubarrays(vector<int>& arr) {
         int n = arr.size();
 
